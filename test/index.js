@@ -63,7 +63,7 @@ describe("superstore-sync", function() {
     assert.equal(val, undefined);
   });
 
-  if("Should json encode and decode objects", function() {
+  it("Should json encode and decode objects", function() {
     var obj = {
       test: [1,4,6,7]
     };
