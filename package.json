@@ -10,17 +10,26 @@
     "test": "test"
   },
   "scripts": {
-    "test": "./node_modules/.bin/grunt test; ./node_modules/.bin/buster test"
+    "test": "./node_modules/testling/bin/cmd.js"
   },
   "devDependencies": {
-    "grunt": "~0.4.1",
-    "grunt-cli": "~0.1.8",
-    "buster-istanbul": "~0.1.10",
-    "grunt-browserify": "~1.2.1",
-    "buster": "~0.6.12",
-    "grunt-istanbul": "~0.2.2",
-    "phantomjs": "~1.9.1",
-    "q": "~0.9.6"
+    "browserify": "*",
+    "testling": "*",
+    "coverify": "*",
+    "mocha": "~1.14.0"
+  },
+  "testling": {
+    "files": "test/index.js",
+    "harness" : "mocha",
+    "browsers": [
+      "ie/8", "ie/9", "ie/10",
+      "firefox/latest",
+      "chrome/latest",
+      "opera/latest",
+      "safari/latest",
+      "iphone/latest",
+      "android-browser/latest"
+    ]
   },
   "repository": {
     "type": "git",
